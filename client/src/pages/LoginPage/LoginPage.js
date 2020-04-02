@@ -19,6 +19,7 @@ const LoginPage = (props) => {
           </div>
         </div>
         <div className={ styles.loginFormContainer }>
+          <h2>LOGIN TO YOUR ACCOUNT</h2>
           <LoginForm/>
         </div>
       </div>
