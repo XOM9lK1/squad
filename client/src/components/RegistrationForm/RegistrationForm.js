@@ -19,7 +19,7 @@ class RegistrationForm extends React.Component {
     this.props.authClear();
   }
 
-  clicked = (values) => {
+  onSendForm = (values) => {
     this.props.register({
       firstName: values.firstName,
       lastName: values.lastName,
@@ -44,7 +44,7 @@ class RegistrationForm extends React.Component {
         <div className={styles.signUpFormContainer}>
           {error && <Error data={error.data} status={error.status}
                            clearError={authClear}/>}
-          <form onSubmit={handleSubmit(this.clicked)}>
+          <form onSubmit={handleSubmit(this.onSendForm)}>
             <div className={styles.row}>
               <Field
                   name='firstName'
